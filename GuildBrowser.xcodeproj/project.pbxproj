@@ -60,6 +60,9 @@
 		CB9FDD3415E9B34900B3713E /* WoWApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDD2715E9B34900B3713E /* WoWApiClient.m */; };
 		CB9FDD3515E9B34900B3713E /* WowItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDD2915E9B34900B3713E /* WowItemView.m */; };
 		CB9FDD3615E9B34900B3713E /* WoWUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9FDD2B15E9B34900B3713E /* WoWUtils.m */; };
+		E785CB2317A66D7800898EA8 /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = E785CB2117A66D7800898EA8 /* character.json */; };
+		E785CB2417A66D7800898EA8 /* guild.json in Resources */ = {isa = PBXBuildFile; fileRef = E785CB2217A66D7800898EA8 /* guild.json */; };
+		E785CB2717A66DC400898EA8 /* CharacterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E785CB2617A66DC400898EA8 /* CharacterTests.m */; };
 		E7A2E77517A2ADFA0007747E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9FDC5D15E9872E00B3713E /* SenTestingKit.framework */; };
 		E7A2E77617A2ADFA0007747E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9FDC3F15E9872D00B3713E /* UIKit.framework */; };
 		E7A2E77717A2ADFA0007747E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9FDC4115E9872D00B3713E /* Foundation.framework */; };
@@ -169,6 +172,10 @@
 		CB9FDD2915E9B34900B3713E /* WowItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WowItemView.m; sourceTree = "<group>"; };
 		CB9FDD2A15E9B34900B3713E /* WoWUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoWUtils.h; sourceTree = "<group>"; };
 		CB9FDD2B15E9B34900B3713E /* WoWUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoWUtils.m; sourceTree = "<group>"; };
+		E785CB2117A66D7800898EA8 /* character.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = character.json; sourceTree = "<group>"; };
+		E785CB2217A66D7800898EA8 /* guild.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = guild.json; sourceTree = "<group>"; };
+		E785CB2517A66DC400898EA8 /* CharacterTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterTests.h; sourceTree = "<group>"; };
+		E785CB2617A66DC400898EA8 /* CharacterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterTests.m; sourceTree = "<group>"; };
 		E7A2E77417A2ADFA0007747E /* GuildBrowserLogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuildBrowserLogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A2E77A17A2ADFA0007747E /* GuildBrowserLogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuildBrowserLogicTests-Info.plist"; sourceTree = "<group>"; };
 		E7A2E77C17A2ADFA0007747E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -395,9 +402,23 @@
 			name = "view controllers";
 			sourceTree = "<group>";
 		};
+		E785CB2017A66D7800898EA8 /* testdata */ = {
+			isa = PBXGroup;
+			children = (
+				E785CB2117A66D7800898EA8 /* character.json */,
+				E785CB2217A66D7800898EA8 /* guild.json */,
+			);
+			name = testdata;
+			path = ../GuildBrowser/testdata;
+			sourceTree = "<group>";
+		};
 		E7A2E77817A2ADFA0007747E /* GuildBrowserLogicTests */ = {
 			isa = PBXGroup;
 			children = (
+				E7A2E78517A2B29E0007747E /* WowUtilsTests.h */,
+				E7A2E78617A2B29E0007747E /* WowUtilsTests.m */,
+				E785CB2517A66DC400898EA8 /* CharacterTests.h */,
+				E785CB2617A66DC400898EA8 /* CharacterTests.m */,
 				E7A2E77917A2ADFA0007747E /* Supporting Files */,
 			);
 			path = GuildBrowserLogicTests;
@@ -409,8 +430,7 @@
 				E7A2E77A17A2ADFA0007747E /* GuildBrowserLogicTests-Info.plist */,
 				E7A2E77B17A2ADFA0007747E /* InfoPlist.strings */,
 				E7A2E78117A2ADFA0007747E /* GuildBrowserLogicTests-Prefix.pch */,
-				E7A2E78517A2B29E0007747E /* WowUtilsTests.h */,
-				E7A2E78617A2B29E0007747E /* WowUtilsTests.m */,
+				E785CB2017A66D7800898EA8 /* testdata */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -544,6 +564,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A2E77D17A2ADFA0007747E /* InfoPlist.strings in Resources */,
+				E785CB2317A66D7800898EA8 /* character.json in Resources */,
+				E785CB2417A66D7800898EA8 /* guild.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +648,7 @@
 				E7A2E78A17A2B4A40007747E /* Item.m in Sources */,
 				E7A2E78B17A2B4A40007747E /* WoWUtils.m in Sources */,
 				E7A2E78717A2B29E0007747E /* WowUtilsTests.m in Sources */,
+				E785CB2717A66DC400898EA8 /* CharacterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -863,6 +886,7 @@
 				E7A2E78317A2ADFA0007747E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
